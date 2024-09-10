@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="shortcut icon" href="./assets/confetti.ico" type="image/x-icon">
+    <title>Happy Birthday</title>
+</head>
+<body class="box-border text-neutral-50 bg-neutral-900 p-2 select-none">
+
+    <div class="s1 p-2 hidden  flex flex-col justify-center items-center  text-3xl md:text-5xl text-slate-800">
+            <h1 class="s1_1 " style="color: aliceblue;">Hey!</h1>
+            <h1 class="s1_2" style="color: coral;">Jhanker Mahbub , it's your Birthday</h1>
+    </div>
+
+    <div class="s2 p-2 hidden  flex flex-col justify-center items-center  text-3xl md:text-5xl text-slate-800">
+        <p class="text-center " style="color: greenyellow;">Click on the Gift</p>
+        <div class="flex mt-80 justify-center items-center">
+            <button id="giftBtn">
+                <img 
+                    src="./assets/gift.png" alt="gift image"
+                    class="h-auto w-16 md:w-32 "
+                >
+            </button>
+        </div>
+    </div>
+
+    <div class="s3 hidden m-4  flex sm:flex-col md:flex-row">
+        <div class="msg  flex flex-col justify-center items-center gap-4">
+            <h3 class="glow p-1  text-4xl md:text-6xl">Happy Birthday Jhanker Mahbub</h4>
+            <div class="imgDiv box-border p-5   relative">
+                <img 
+                    src="./assets/birthdayPerson.jpg"
+                    class="h-auto w-full object-cover "
+                    style="max-height: 500px;"
+                />
+                <!-- <img 
+                    src="assets/cap.png" 
+                    id="cap" alt="Birthday cap"
+                    
+                    class="absolute left-1/2 transform -translate-x-1/2 bottom-0      mx-auto w-full max-w-full h-auto" 
+                    style="z-index: 999;" 
+                > -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Music by <a href="https://pixabay.com/users/nesrality-22721863/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=117436">Nesrality</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=117436">Pixabay</a> -->
+    <audio id="myAudio" class="hidden" controls muted>
+        <source src="assets/birthday.mp3" type="audio/mpeg" >
+    </audio>
+
+</body>
+<script src="index.js" defer></script>
+</html>

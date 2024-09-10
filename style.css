@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
+:root {
+    --glow-primary-color: #c9dc4c; 
+    --glow-secondary-color: #90be6d; 
+    --glow-text-color: #329c51; 
+    --glow-accent-color: #a5dffd; 
+    --glow-blink-color: #ea682c;
+  }
+
+body{
+    font-family: 'Shantell Sans', cursive;
+
+    background-image: url('./assets/background.jpg');
+    /* <a href="https://www.freepik.com/free-vector/blank-meadow-landscape-scene_16457376.htm#query=garden&position=3&from_view=keyword&track=sph">Image by brgfx</a> on Freepik */
+
+
+    /* center background image  */
+    background-position: center center;    /*  vertically & horizontally center rakhne ke liye */
+    background-repeat: no-repeat;   /* image small hua block se toh rokne ke liye */
+    background-size: cover;         /*  to cover whole block */
+    background-attachment: fixed;   /* to stop image from scrolling  */
+}
+
+/* ================================== */
+ 
+  .glow {
+    text-shadow: 0 0 5px var(--glow-primary-color), 0 0 15px var(--glow-primary-color), 0 0 20px var(--glow-primary-color), 0 0 40px var(--glow-primary-color), 0 0 60px var(--glow-secondary-color), 0 0 10px var(--glow-accent-color), 0 0 98px var(--glow-secondary-color);
+    color: var(--glow-text-color);
+    font-family: "Sacramento", cursive;
+    text-align: center;
+  
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: var(--glow-blink-color);
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 5px var(--glow-primary-color), 0 0 15px var(--glow-primary-color), 0 0 20px var(--glow-primary-color), 0 0 40px var(--glow-primary-color), 0 0 60px var(--glow-secondary-color), 0 0 10px var(--glow-accent-color), 0 0 98px var(--glow-secondary-color);
+      color: var(--glow-text-color);
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: var(--glow-blink-color);
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 5px var(--glow-primary-color), 0 0 15px var(--glow-primary-color), 0 0 20px var(--glow-primary-color), 0 0 40px var(--glow-primary-color), 0 0 60px var(--glow-secondary-color), 0 0 10px var(--glow-accent-color), 0 0 98px var(--glow-secondary-color);
+      color: var(--glow-text-color);
+    }
+  }
+  
+  
+/* ================================== */
+
+@media only screen and (max-width: 767px) {
+    body {
+       background-image: url(./assets/backgroundSmall.jpg);
+    }
+}
